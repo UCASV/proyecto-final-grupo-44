@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "4PZbdagWlhvdwW1pFSFhiJlU71PTBWiekj0pEWfqXw5SedD2hYI7eQl6LjRjFPG8zoOBtZjzgHsEOfPd4/DBcA==",
+  "dgSpecHash": "02QVIzWxFQ+oBeOMi9vrGM7Gm0JhPdzQCRMK8oOaoidZgC1nZlbwx7kIIAQAv/HP20LGcXmYwI7oXDGxQc/XNA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Diego\\Documents\\Repositories\\pjF\\Gestion_Citas_Covid19\\Gestion_Citas_Covid19.csproj",
+  "projectFilePath": "C:\\Users\\Diego\\Documents\\Repositories\\proyecto-final-grupo-44\\Gestion_Citas_Covid19\\Gestion_Citas_Covid19.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Diego\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Diego\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
