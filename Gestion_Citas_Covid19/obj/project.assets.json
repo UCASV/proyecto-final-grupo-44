@@ -5761,19 +5761,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Robert\\.nuget\\packages\\": {}
+    "C:\\Users\\Daniel Mendez\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Robert\\Documents\\Workspaces\\Proyecto final\\proyecto-final-grupo-44\\Gestion_Citas_Covid19\\Gestion_Citas_Covid19.csproj",
+      "projectUniqueName": "C:\\Users\\Daniel Mendez\\OneDrive\\Escritorio\\proyecto-final-grupo-44\\Gestion_Citas_Covid19\\Gestion_Citas_Covid19.csproj",
       "projectName": "Gestion_Citas_Covid19",
-      "projectPath": "C:\\Users\\Robert\\Documents\\Workspaces\\Proyecto final\\proyecto-final-grupo-44\\Gestion_Citas_Covid19\\Gestion_Citas_Covid19.csproj",
-      "packagesPath": "C:\\Users\\Robert\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Robert\\Documents\\Workspaces\\Proyecto final\\proyecto-final-grupo-44\\Gestion_Citas_Covid19\\obj\\",
+      "projectPath": "C:\\Users\\Daniel Mendez\\OneDrive\\Escritorio\\proyecto-final-grupo-44\\Gestion_Citas_Covid19\\Gestion_Citas_Covid19.csproj",
+      "packagesPath": "C:\\Users\\Daniel Mendez\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Daniel Mendez\\OneDrive\\Escritorio\\proyecto-final-grupo-44\\Gestion_Citas_Covid19\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Robert\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Daniel Mendez\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -5832,7 +5832,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
       }
     }
   }
