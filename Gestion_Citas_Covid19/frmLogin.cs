@@ -63,23 +63,37 @@ namespace Gestion_Citas_Covid19
 
         private void btnToAccess_Click(object sender, EventArgs e)
         {
-            if (txtUser.Text == "Usuario" || txtPassword.Text == "Contraseña")
+            //Add DBContext
+            using (SGCCDBContext dbList = new SGCCDBContext())
             {
-                MessageBox.Show("Debe llenar los campos: Usuario y Contraseña", "Error",
-                    MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            }
-            else if (txtUser.Text != "Roberto" && txtPassword.Text != "designer1")
-            {
-                MessageBox.Show("Usuario o contraseña incorrectos", "Observación",
-                    MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            }
-            else if (txtUser.Text == "Roberto" && txtPassword.Text == "designer1")
-            {
-                FrmCabinChoice cabinChoice = new FrmCabinChoice();
-                this.Hide();
-                cabinChoice.ShowDialog();
+                string managerUser = txtUser.Text;
+                string managerPassword = txtPassword.Text;
+
+                var userList = dbList.Employees
+                    .Where(x => x.ManagerUsername == managerUser && x.ManagerPassword == managerPassword)
+                    .ToList();
+
+
+
+                if (txtUser.Text == "Usuario" || txtPassword.Text == "Contraseña")
+                {
+                    MessageBox.Show("Debe llenar los campos: Usuario y Contraseña", "Error",
+                        MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+                else if (userList.Count() == 0)
+                {
+                    MessageBox.Show("Usuario o contraseña incorrectos", "Observación",
+                        MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+                else if (userList.Count() == 1)
+                {
+                    FrmCabinChoice cabinChoice = new FrmCabinChoice();
+                    this.Hide();
+                    cabinChoice.ShowDialog();
+                }
             }
         }
+
 
         private void txtUser_Enter_1(object sender, EventArgs e)
         {
