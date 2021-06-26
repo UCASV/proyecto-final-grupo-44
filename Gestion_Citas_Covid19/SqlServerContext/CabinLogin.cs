@@ -7,6 +7,7 @@ namespace Gestion_Citas_Covid19.SqlServerContext
 {
     public partial class CabinLogin
     {
+        public int Id { get; set; }
         public int IdEmployee { get; set; }
         public int IdCabin { get; set; }
         public DateTime? DtLogin { get; set; }

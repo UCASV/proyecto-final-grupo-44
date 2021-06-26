@@ -130,29 +130,29 @@ namespace Gestion_Citas_Covid19.SqlServerContext
 
             modelBuilder.Entity<CabinLogin>(entity =>
             {
-                entity.HasKey(e => new { e.IdCabin, e.IdEmployee });
-
                 entity.ToTable("CABIN_LOGIN");
 
-                entity.Property(e => e.IdCabin).HasColumnName("id_cabin");
-
-                entity.Property(e => e.IdEmployee).HasColumnName("id_employee");
+                entity.Property(e => e.Id).HasColumnName("id");
 
                 entity.Property(e => e.DtLogin)
                     .HasColumnType("datetime")
                     .HasColumnName("dt_login");
 
+                entity.Property(e => e.IdCabin).HasColumnName("id_cabin");
+
+                entity.Property(e => e.IdEmployee).HasColumnName("id_employee");
+
                 entity.HasOne(d => d.IdCabinNavigation)
                     .WithMany(p => p.CabinLogins)
                     .HasForeignKey(d => d.IdCabin)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("fk_cabin_login");
+                    .HasConstraintName("fk_cabin_cabin_login");
 
                 entity.HasOne(d => d.IdEmployeeNavigation)
                     .WithMany(p => p.CabinLogins)
                     .HasForeignKey(d => d.IdEmployee)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("fk_employee_login");
+                    .HasConstraintName("fk_employee_cabin_login");
             });
 
             modelBuilder.Entity<ChronicIllness>(entity =>
@@ -182,7 +182,7 @@ namespace Gestion_Citas_Covid19.SqlServerContext
             modelBuilder.Entity<Citizen>(entity =>
             {
                 entity.HasKey(e => e.Dui)
-                    .HasName("PK__CITIZEN__D876F1BEACB3C725");
+                    .HasName("PK__CITIZEN__D876F1BE9DA75C93");
 
                 entity.ToTable("CITIZEN");
 
@@ -304,7 +304,7 @@ namespace Gestion_Citas_Covid19.SqlServerContext
             modelBuilder.Entity<ObservationPeriod>(entity =>
             {
                 entity.HasKey(e => new { e.IdAppointment, e.IdSideEffect })
-                    .HasName("PK_OBSERVATION");
+                    .HasName("PK__OBSERVAT__48FC3E5ED0C9374C");
 
                 entity.ToTable("OBSERVATION_PERIOD");
 

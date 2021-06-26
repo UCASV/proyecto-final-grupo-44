@@ -64,7 +64,7 @@ namespace Gestion_Citas_Covid19
                     id = 10;
 
                 DateTime loginDt = DateTime.Today; //Fix 
-
+                
                 using (SGCCDBContext dbList = new SGCCDBContext()) 
                 {
                     CabinLogin record = new CabinLogin()
@@ -77,6 +77,11 @@ namespace Gestion_Citas_Covid19
                     dbList.CabinLogins.Add(record);
                     dbList.SaveChanges();
                 }
+
+                FrmPrincipal window = new FrmPrincipal(); 
+                this.Hide();
+                window.ShowDialog();
+
             }
 
 

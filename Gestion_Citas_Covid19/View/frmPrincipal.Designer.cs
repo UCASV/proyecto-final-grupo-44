@@ -271,7 +271,6 @@ namespace Gestion_Citas_Covid19
             this.Name = "frmPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmPrincipal";
-            this.Load += new System.EventHandler(this.frmPrincipal_Load);
             this.Sidebar.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).EndInit();
             this.panel_Header.ResumeLayout(false);
@@ -283,7 +282,7 @@ namespace Gestion_Citas_Covid19
 
         private void frmPrincipal_Load(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            
         }
 
         #endregion
