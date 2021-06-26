@@ -31,7 +31,7 @@ namespace Gestion_Citas_Covid19
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.txtUser = new System.Windows.Forms.TextBox();
+            this.txtHide = new System.Windows.Forms.TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
@@ -40,18 +40,21 @@ namespace Gestion_Citas_Covid19
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.btnToAccess = new System.Windows.Forms.Button();
             this.ptbExit = new System.Windows.Forms.PictureBox();
+            this.txtUser = new System.Windows.Forms.TextBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbExit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Gestion_Citas_Covid19.Properties.Resources.User_Icon;
-            this.pictureBox1.Location = new System.Drawing.Point(173, 208);
+            this.pictureBox1.Location = new System.Drawing.Point(173, 207);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(46, 36);
@@ -59,24 +62,25 @@ namespace Gestion_Citas_Covid19
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
-            // txtUser
+            // txtHide
             // 
-            this.txtUser.BackColor = System.Drawing.SystemColors.Window;
-            this.txtUser.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.txtUser.ForeColor = System.Drawing.Color.DimGray;
-            this.txtUser.Location = new System.Drawing.Point(230, 208);
-            this.txtUser.Margin = new System.Windows.Forms.Padding(4);
-            this.txtUser.Name = "txtUser";
-            this.txtUser.Size = new System.Drawing.Size(366, 34);
-            this.txtUser.TabIndex = 2;
-            this.txtUser.Text = "Usuario";
-            this.txtUser.Enter += new System.EventHandler(this.txtUser_Enter);
-            this.txtUser.Leave += new System.EventHandler(this.txtUser_Leave);
+            this.txtHide.BackColor = System.Drawing.SystemColors.Window;
+            this.txtHide.Enabled = false;
+            this.txtHide.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.txtHide.ForeColor = System.Drawing.Color.DimGray;
+            this.txtHide.Location = new System.Drawing.Point(29, 23);
+            this.txtHide.Margin = new System.Windows.Forms.Padding(4);
+            this.txtHide.Name = "txtHide";
+            this.txtHide.Size = new System.Drawing.Size(74, 34);
+            this.txtHide.TabIndex = 2;
+            this.txtHide.Text = "Usuario";
+            this.txtHide.Enter += new System.EventHandler(this.txtUser_Enter);
+            this.txtHide.Leave += new System.EventHandler(this.txtUser_Leave);
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::Gestion_Citas_Covid19.Properties.Resources.Logo_Gobierno_SV_white;
-            this.pictureBox2.Location = new System.Drawing.Point(263, 40);
+            this.pictureBox2.Location = new System.Drawing.Point(244, 40);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(110, 100);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -87,7 +91,7 @@ namespace Gestion_Citas_Covid19
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.Image = global::Gestion_Citas_Covid19.Properties.Resources.logo_covid_SD;
-            this.pictureBox3.Location = new System.Drawing.Point(390, 40);
+            this.pictureBox3.Location = new System.Drawing.Point(371, 40);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(164, 113);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -98,7 +102,7 @@ namespace Gestion_Citas_Covid19
             // 
             this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox4.Image = global::Gestion_Citas_Covid19.Properties.Resources.Barra;
-            this.pictureBox4.Location = new System.Drawing.Point(374, 40);
+            this.pictureBox4.Location = new System.Drawing.Point(355, 40);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(10, 100);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -110,7 +114,7 @@ namespace Gestion_Citas_Covid19
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(287, 166);
+            this.label1.Location = new System.Drawing.Point(281, 166);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(223, 29);
             this.label1.TabIndex = 7;
@@ -120,7 +124,7 @@ namespace Gestion_Citas_Covid19
             // pictureBox5
             // 
             this.pictureBox5.Image = global::Gestion_Citas_Covid19.Properties.Resources.Candado;
-            this.pictureBox5.Location = new System.Drawing.Point(173, 265);
+            this.pictureBox5.Location = new System.Drawing.Point(173, 263);
             this.pictureBox5.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(51, 36);
@@ -130,6 +134,7 @@ namespace Gestion_Citas_Covid19
             // 
             // txtPassword
             // 
+            this.txtPassword.Enabled = false;
             this.txtPassword.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txtPassword.ForeColor = System.Drawing.Color.DimGray;
             this.txtPassword.Location = new System.Drawing.Point(230, 265);
@@ -150,13 +155,14 @@ namespace Gestion_Citas_Covid19
             this.btnToAccess.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(234)))), ((int)(((byte)(255)))));
             this.btnToAccess.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnToAccess.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnToAccess.ForeColor = System.Drawing.Color.DimGray;
-            this.btnToAccess.Location = new System.Drawing.Point(344, 322);
+            this.btnToAccess.ForeColor = System.Drawing.Color.Black;
+            this.btnToAccess.Location = new System.Drawing.Point(332, 322);
             this.btnToAccess.Name = "btnToAccess";
             this.btnToAccess.Size = new System.Drawing.Size(120, 40);
             this.btnToAccess.TabIndex = 10;
             this.btnToAccess.Text = "Acceder";
             this.btnToAccess.UseVisualStyleBackColor = false;
+            this.btnToAccess.Click += new System.EventHandler(this.btnToAccess_Click);
             // 
             // ptbExit
             // 
@@ -170,12 +176,37 @@ namespace Gestion_Citas_Covid19
             this.ptbExit.TabStop = false;
             this.ptbExit.Click += new System.EventHandler(this.ptbExit_Click_1);
             // 
+            // txtUser
+            // 
+            this.txtUser.BackColor = System.Drawing.SystemColors.Window;
+            this.txtUser.Enabled = false;
+            this.txtUser.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.txtUser.ForeColor = System.Drawing.Color.DimGray;
+            this.txtUser.Location = new System.Drawing.Point(230, 208);
+            this.txtUser.Margin = new System.Windows.Forms.Padding(4);
+            this.txtUser.Name = "txtUser";
+            this.txtUser.Size = new System.Drawing.Size(366, 34);
+            this.txtUser.TabIndex = 12;
+            this.txtUser.Text = "Usuario";
+            this.txtUser.Enter += new System.EventHandler(this.txtUser_Enter_1);
+            this.txtUser.Leave += new System.EventHandler(this.txtUser_Leave_1);
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(130, 63);
+            this.pictureBox6.TabIndex = 13;
+            this.pictureBox6.TabStop = false;
+            // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(37)))), ((int)(((byte)(92)))));
-            this.ClientSize = new System.Drawing.Size(778, 391);
+            this.ClientSize = new System.Drawing.Size(778, 404);
+            this.Controls.Add(this.pictureBox6);
+            this.Controls.Add(this.txtUser);
             this.Controls.Add(this.ptbExit);
             this.Controls.Add(this.btnToAccess);
             this.Controls.Add(this.txtPassword);
@@ -184,7 +215,7 @@ namespace Gestion_Citas_Covid19
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.txtUser);
+            this.Controls.Add(this.txtHide);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -200,6 +231,7 @@ namespace Gestion_Citas_Covid19
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbExit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -207,7 +239,7 @@ namespace Gestion_Citas_Covid19
 
         #endregion
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TextBox txtUser;
+        private System.Windows.Forms.TextBox txtHide;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
@@ -216,6 +248,8 @@ namespace Gestion_Citas_Covid19
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Button btnToAccess;
         private System.Windows.Forms.PictureBox ptbExit;
+        private System.Windows.Forms.TextBox txtUser;
+        private System.Windows.Forms.PictureBox pictureBox6;
     }
 }
 

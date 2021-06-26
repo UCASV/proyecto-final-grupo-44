@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Gestion_Citas_Covid19
@@ -19,29 +13,26 @@ namespace Gestion_Citas_Covid19
 
         private void frmLogin_Load(object sender, EventArgs e)
         {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
+            txtHide.Enabled = true;
+            txtUser.Enabled = true;
+            txtPassword.Enabled = true;
         }
 
         private void txtUser_Enter(object sender, EventArgs e)
         {
-            if (txtUser.Text == "Usuario")
+            if (txtHide.Text == "Usuario")
             {
-                txtUser.Text = "";
-                txtUser.ForeColor = Color.Black;
+                txtHide.Text = "";
+                txtHide.ForeColor = Color.Black;
             }
         }
 
         private void txtUser_Leave(object sender, EventArgs e)
         {
-            if (txtUser.Text == "")
+            if (txtHide.Text == "")
             {
-                txtUser.Text = "Usuario";
-                txtUser.ForeColor = Color.DimGray;
+                txtHide.Text = "Usuario";
+                txtHide.ForeColor = Color.DimGray;
             }
         }
 
@@ -68,6 +59,44 @@ namespace Gestion_Citas_Covid19
         private void ptbExit_Click_1(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void btnToAccess_Click(object sender, EventArgs e)
+        {
+            if (txtUser.Text == "Usuario" || txtPassword.Text == "Contraseña")
+            {
+                MessageBox.Show("Debe llenar los campos: Usuario y Contraseña", "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            else if (txtUser.Text != "Roberto" && txtPassword.Text != "designer1")
+            {
+                MessageBox.Show("Usuario o contraseña incorrectos", "Observación",
+                    MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            else if (txtUser.Text == "Roberto" && txtPassword.Text == "designer1")
+            {
+                FrmCabinChoice cabinChoice = new FrmCabinChoice();
+                this.Hide();
+                cabinChoice.ShowDialog();
+            }
+        }
+
+        private void txtUser_Enter_1(object sender, EventArgs e)
+        {
+            if (txtUser.Text == "Usuario")
+            {
+                txtUser.Text = "";
+                txtUser.ForeColor = Color.Black;
+            }
+        }
+
+        private void txtUser_Leave_1(object sender, EventArgs e)
+        {
+            if (txtUser.Text == "")
+            {
+                txtUser.Text = "Usuario";
+                txtUser.ForeColor = Color.DimGray;
+            }
         }
     }
 }
