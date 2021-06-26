@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Drawing;
+using System.Linq;
 using System.Windows.Forms;
+using Gestion_Citas_Covid19.SqlServerContext;
 
 namespace Gestion_Citas_Covid19
 {
@@ -68,12 +70,10 @@ namespace Gestion_Citas_Covid19
             {
                 string managerUser = txtUser.Text;
                 string managerPassword = txtPassword.Text;
-
+                
                 var userList = dbList.Employees
                     .Where(x => x.ManagerUsername == managerUser && x.ManagerPassword == managerPassword)
                     .ToList();
-
-
 
                 if (txtUser.Text == "Usuario" || txtPassword.Text == "Contraseña")
                 {
@@ -87,7 +87,8 @@ namespace Gestion_Citas_Covid19
                 }
                 else if (userList.Count() == 1)
                 {
-                    FrmCabinChoice cabinChoice = new FrmCabinChoice();
+                    int managerId = userList[0].Id;
+                    FrmCabinChoice cabinChoice = new FrmCabinChoice(managerId);
                     this.Hide();
                     cabinChoice.ShowDialog();
                 }
