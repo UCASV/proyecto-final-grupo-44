@@ -29,9 +29,12 @@ namespace Gestion_Citas_Covid19.View
 
         }
 
-        public FrmVaccinationProcess()
+        int idAppointment = 0;
+
+        public FrmVaccinationProcess(int appointmentId)
         {
             InitializeComponent();
+            idAppointment = appointmentId;
         }
 
         private void DTP_WaitingRoom_ValueChanged(object sender, EventArgs e)

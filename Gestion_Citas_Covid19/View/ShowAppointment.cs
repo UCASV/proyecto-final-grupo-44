@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Gestion_Citas_Covid19.SqlServerContext;
+using Gestion_Citas_Covid19.View;
 using Gestion_Citas_Covid19.ViewModels;
 
 namespace Gestion_Citas_Covid19
@@ -50,6 +51,11 @@ namespace Gestion_Citas_Covid19
 
                         MessageBox.Show("Funciona", $"ID = {appt.Id}",
                                             MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        var window = new FrmVaccinationProcess(appt.Id);
+                        this.Hide();
+
+                        window.ShowDialog();
                     }
                 }
             }
@@ -59,11 +65,6 @@ namespace Gestion_Citas_Covid19
                                            MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-
-
-
-                //new frmProcesoVacunacion
-                //show.dialogue(idAppointment)        
+               
     }
 }
