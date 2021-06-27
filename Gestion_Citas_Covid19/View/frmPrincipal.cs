@@ -83,6 +83,11 @@ namespace Gestion_Citas_Covid19
 
         }
 
+        private void btn_PersonnelInformation_Click(object sender, EventArgs e)
+        {
+            //AbrFormInPanel(new ShowAppointment());
+
+        }
     }
 }
 

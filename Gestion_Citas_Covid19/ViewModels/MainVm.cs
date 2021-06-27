@@ -6,16 +6,17 @@ using System.Threading.Tasks;
 
 namespace Gestion_Citas_Covid19.ViewModels
 {
-    class MainVm
+    public class MainVm
     {
-        string DUI { get; set; }
+        public int ID { get; set; }
 
-        DateTime Fecha  { get; set; }
+        public string DUI { get; set; }
 
-        string Lugar { get; set; }
+        public DateTime Fecha  { get; set; }
 
-        string Status { get; set; }
+        public string Lugar { get; set; }
 
+        public string Status { get; set; }
 
     }
 }

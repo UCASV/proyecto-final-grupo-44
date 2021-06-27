@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Gestion_Citas_Covid19.SqlServerContext;
+using Gestion_Citas_Covid19.ViewModels;
 
 namespace Gestion_Citas_Covid19
 {
@@ -19,12 +21,49 @@ namespace Gestion_Citas_Covid19
 
         private void ShowAppointment_Load(object sender, EventArgs e)
         {
+            using (SGCCDBContext dbList = new SGCCDBContext())
+            {
+                var newDs = dbList.Appointments.ToList();
+                var mappedDs = new List<MainVm>();
 
+                newDs.ForEach(x => mappedDs.Add(dgvMapper.MainVmMapper(x)));
+
+                dgvAppointments.DataSource = mappedDs;
+            }
+
+            DataGridViewButtonColumn btn = new DataGridViewButtonColumn();
+            btn.Name = "btnStart";
+
+            dgvAppointments.Columns.Add(btn);
         }
 
-        private void LoadDGV()
+        private void dgvAppointments_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            try
+            {
+                if (this.dgvAppointments.Columns[e.ColumnIndex].Name == "btnStart")
+                {
+                    using (SGCCDBContext dbList = new SGCCDBContext())
+                    {
+                        MainVm selectedItem = (MainVm)dgvAppointments.CurrentRow.DataBoundItem;
+                        Appointment appt = dbList.Appointments.Find(selectedItem.ID);
 
+                        MessageBox.Show("Funciona", $"ID = {appt.Id}",
+                                            MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Error", "No",
+                                           MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
+
+
+
+
+                //new frmProcesoVacunacion
+                //show.dialogue(idAppointment)        
     }
 }

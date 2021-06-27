@@ -150,6 +150,7 @@ namespace Gestion_Citas_Covid19
             this.btn_PersonnelInformation.TabIndex = 3;
             this.btn_PersonnelInformation.Text = "Informacion de Personal";
             this.btn_PersonnelInformation.UseVisualStyleBackColor = false;
+            this.btn_PersonnelInformation.Click += new System.EventHandler(this.btn_PersonnelInformation_Click);
             // 
             // btn_AddAppointment
             // 

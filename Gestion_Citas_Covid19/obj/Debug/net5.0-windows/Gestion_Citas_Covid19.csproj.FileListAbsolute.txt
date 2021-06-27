@@ -233,3 +233,4 @@ C:\Users\Diego\Documents\Repositories\proyecto-final-grupo-44\Gestion_Citas_Covi
 C:\Users\Diego\Documents\Repositories\proyecto-final-grupo-44\Gestion_Citas_Covid19\obj\Debug\net5.0-windows\Gestion_Citas_Covid19.AddAppointment.resources
 C:\Users\Diego\Documents\Repositories\proyecto-final-grupo-44\Gestion_Citas_Covid19\obj\Debug\net5.0-windows\Gestion_Citas_Covid19.FrmPrincipal.resources
 C:\Users\Diego\Documents\Repositories\proyecto-final-grupo-44\Gestion_Citas_Covid19\obj\Debug\net5.0-windows\Gestion_Citas_Covid19.ShowAppointment.resources
+C:\Users\Diego\Documents\Repositories\proyecto-final-grupo-44\Gestion_Citas_Covid19\obj\Debug\net5.0-windows\Gestion_Citas_Covid19.View.frmInfoP.resources
