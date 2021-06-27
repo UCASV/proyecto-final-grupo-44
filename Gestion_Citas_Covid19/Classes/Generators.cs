@@ -15,11 +15,22 @@ namespace Gestion_Citas_Covid19.Classes
             {
                 DateTime apptDate = DateTime.Today;
                 apptDate.AddDays(72);
-                CreateAppointment(dui, cabinAddres, idDose, apptDate);
+                CreateAppointment(dui, cabinAddres, idDose, apptDate.AddDays(72));
             }
             else if (idDose == 2)
             {
+                using (SGCCDBContext dbLista = new SGCCDBContext())
+                {
+                    var firstAppointment = dbLista.Appointments.Where(x => x.DuiCitizen == dui).ToList();
+                    
+                    if(firstAppointment[0].IdStatus == 3)
+                    {
+                        DateTime newAppointment = (DateTime)firstAppointment[0].DtAppointment;
+                        newAppointment.AddDays(70);
 
+                        CreateAppointment(dui, cabinAddres, idDose, newAppointment.AddDays(70));
+                    }
+                }
             }
 
 
@@ -31,8 +42,16 @@ namespace Gestion_Citas_Covid19.Classes
             {
                 Appointment appt = new Appointment()
                 {
-                    DtAppointment = apptDate
+                    DtAppointment = apptDate,
+                    DtWaitlist = null,
+                    DtVaccination = null,
+                    ApptAddress = cabinAddres,
+                    IdStatus = 1,
+                    DuiCitizen = dui
                 };
+
+                dbList.Appointments.Add(appt);
+                dbList.SaveChanges();
             }
         }
     }

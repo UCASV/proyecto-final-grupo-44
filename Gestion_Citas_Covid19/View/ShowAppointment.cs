@@ -16,5 +16,15 @@ namespace Gestion_Citas_Covid19
         {
             InitializeComponent();
         }
+
+        private void ShowAppointment_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LoadDGV()
+        {
+
+        }
     }
 }
