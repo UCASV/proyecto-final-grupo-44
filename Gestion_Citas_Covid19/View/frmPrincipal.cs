@@ -47,12 +47,12 @@ namespace Gestion_Citas_Covid19
         {
             try
             {
-                DialogResult result = MessageBox.Show("Estas seguro que que quieres salir !", "Informacion", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                DialogResult result = MessageBox.Show("Estas seguro que quieres salir ?", "Cerrar Sesion", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
                 if (result == DialogResult.Yes)
                 {
-                    this.Close();
-                    //frmLogin login = new frmLogin();
-                    //login.Show();
+                    frmLogin login = new frmLogin();
+                    this.Hide();
+                    login.Show();
                 }
             }
             catch
@@ -79,7 +79,10 @@ namespace Gestion_Citas_Covid19
 
         }
     
-        private void FrmPrincipal_Load(object sender, PaintEventArgs e) { }
+        private void FrmPrincipal_Load(object sender, PaintEventArgs e) 
+        {
+
+        }
     }
 }
 

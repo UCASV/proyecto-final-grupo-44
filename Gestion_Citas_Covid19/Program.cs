@@ -1,3 +1,4 @@
+using Gestion_Citas_Covid19.View;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,6 +18,7 @@ namespace Gestion_Citas_Covid19
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            //Application.Run(new FrmPrincipal());
             Application.Run(new frmLogin());
         }
     }
