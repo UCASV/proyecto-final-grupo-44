@@ -4,6 +4,9 @@
     <Compile Update="View\AddAppointment.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="View\frmInfoC.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="View\frmInfoP.cs">
       <SubType>Form</SubType>
     </Compile>

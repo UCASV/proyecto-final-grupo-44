@@ -29,5 +29,25 @@ namespace Gestion_Citas_Covid19.ViewModels
                 Status = status
             };
         }
+
+        public static InfoEVm InfoEmployee(Employee e)
+        {
+            return new InfoEVm
+            {
+                ID = e.Id,
+                NOMBRE = e.EmployeeName,
+                PUESTO = e.,
+
+            };
+        }
+
+        public static InfoCVm InfoCabin(Cabin e)
+        {
+            return new InfoCVm
+            {
+
+            };
+        }
+
     }
 }
