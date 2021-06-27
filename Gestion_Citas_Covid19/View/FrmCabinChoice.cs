@@ -78,10 +78,9 @@ namespace Gestion_Citas_Covid19
                     dbList.SaveChanges();
                 }
 
-                FrmPrincipal window = new FrmPrincipal(); 
+                FrmPrincipal window = new FrmPrincipal(id); 
                 this.Hide();
                 window.ShowDialog();
-
             }
 
 

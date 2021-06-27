@@ -27,10 +27,14 @@ namespace Gestion_Citas_Covid19
             fm.Show();
 
         }
-        public FrmPrincipal()
+
+        int cabin = 0;
+
+        public FrmPrincipal(int idCabin)
         {
             InitializeComponent();
             AbrFormInPanel(new ShowAppointment());
+            cabin = idCabin;
         }
 
         private void btn_ShowAppointment_Click(object sender, EventArgs e)
@@ -40,7 +44,7 @@ namespace Gestion_Citas_Covid19
 
         private void btn_AddAppointment_Click(object sender, EventArgs e)
         {
-            AbrFormInPanel(new AddAppointment());
+            AbrFormInPanel(new AddAppointment(cabin));
         }
 
         private void btn_SignOff_Click(object sender, EventArgs e)
@@ -78,8 +82,7 @@ namespace Gestion_Citas_Covid19
         {
 
         }
-    
-        private void FrmPrincipal_Load(object sender, PaintEventArgs e) { }
+
     }
 }
 

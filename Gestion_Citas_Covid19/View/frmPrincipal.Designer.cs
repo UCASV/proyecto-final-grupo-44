@@ -72,7 +72,7 @@ namespace Gestion_Citas_Covid19
             // 
             // btn_SignOff
             // 
-            this.btn_SignOff.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.btn_SignOff.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_SignOff.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btn_SignOff.BackColor = System.Drawing.Color.White;
@@ -94,7 +94,7 @@ namespace Gestion_Citas_Covid19
             // 
             // btn_CabinInformation
             // 
-            this.btn_CabinInformation.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.btn_CabinInformation.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_CabinInformation.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btn_CabinInformation.BackColor = System.Drawing.Color.White;
@@ -132,7 +132,7 @@ namespace Gestion_Citas_Covid19
             // 
             // btn_PersonnelInformation
             // 
-            this.btn_PersonnelInformation.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.btn_PersonnelInformation.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_PersonnelInformation.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btn_PersonnelInformation.BackColor = System.Drawing.Color.White;
@@ -153,7 +153,7 @@ namespace Gestion_Citas_Covid19
             // 
             // btn_AddAppointment
             // 
-            this.btn_AddAppointment.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.btn_AddAppointment.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_AddAppointment.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btn_AddAppointment.BackColor = System.Drawing.Color.White;
@@ -175,7 +175,7 @@ namespace Gestion_Citas_Covid19
             // 
             // btn_ShowAppointment
             // 
-            this.btn_ShowAppointment.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.btn_ShowAppointment.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_ShowAppointment.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btn_ShowAppointment.BackColor = System.Drawing.Color.White;
@@ -258,7 +258,7 @@ namespace Gestion_Citas_Covid19
             this.panel_WorkArea.Size = new System.Drawing.Size(858, 546);
             this.panel_WorkArea.TabIndex = 0;
             // 
-            // frmPrincipal
+            // FrmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -268,7 +268,7 @@ namespace Gestion_Citas_Covid19
             this.Controls.Add(this.Sidebar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Name = "frmPrincipal";
+            this.Name = "FrmPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmPrincipal";
             this.Sidebar.ResumeLayout(false);
@@ -280,10 +280,7 @@ namespace Gestion_Citas_Covid19
 
         }
 
-        private void frmPrincipal_Load(object sender, EventArgs e)
-        {
-            
-        }
+       
 
         #endregion
 
