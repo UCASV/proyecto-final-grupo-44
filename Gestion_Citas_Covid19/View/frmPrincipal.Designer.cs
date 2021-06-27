@@ -112,6 +112,7 @@ namespace Gestion_Citas_Covid19
             this.btn_CabinInformation.TabIndex = 4;
             this.btn_CabinInformation.Text = "Informacion de Cabina";
             this.btn_CabinInformation.UseVisualStyleBackColor = false;
+            this.btn_CabinInformation.Click += new System.EventHandler(this.btn_CabinInformation_Click);
             // 
             // btn_HideSidebar
             // 

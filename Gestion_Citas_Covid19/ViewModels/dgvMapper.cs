@@ -32,21 +32,46 @@ namespace Gestion_Citas_Covid19.ViewModels
 
         public static InfoEVm InfoEmployee(Employee e)
         {
+            string employeeType = "empty";
+
+            if (e.IdEmployeeType == 1)
+                employeeType = "Gestor";
+            else if (e.IdEmployeeType == 2)
+                employeeType = "Vacunador";
+            else if (e.IdEmployeeType == 3)
+                employeeType = "Asistente de Salud";
+            else if (e.IdEmployeeType == 4)
+                employeeType = "Otro trabajo";
+
+
+
             return new InfoEVm
             {
                 ID = e.Id,
                 NOMBRE = e.EmployeeName,
-                PUESTO = e.,
-
+                EMAIL = e.Email,
+                PUESTO = employeeType
             };
         }
 
-        public static InfoCVm InfoCabin(Cabin e)
+        public static InfoCVm InfoCabin(Cabin c)
         {
-            return new InfoCVm
-            {
+            string employeeName = "empty";
 
-            };
+            using (SGCCDBContext dbList = new SGCCDBContext())
+            {
+                Employee manager = dbList.Employees.Find(c.IdEmployee);
+                employeeName = manager.EmployeeName;
+            }
+
+                return new InfoCVm
+                {
+                    ID = c.Id,
+                    UBICACION = c.CabinAddress,
+                    ENCARGADO = employeeName,
+                    TELEFONO = c.PhoneNumber,
+                    EMAIL = c.Email               
+                };
         }
 
     }

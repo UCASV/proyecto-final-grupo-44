@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Gestion_Citas_Covid19.View;
+using Gestion_Citas_Covid19.ViewModels;
 
 namespace Gestion_Citas_Covid19
 {
@@ -85,8 +87,13 @@ namespace Gestion_Citas_Covid19
 
         private void btn_PersonnelInformation_Click(object sender, EventArgs e)
         {
-            //AbrFormInPanel(new ShowAppointment());
+            AbrFormInPanel(new frmInfoP());
 
+        }
+
+        private void btn_CabinInformation_Click(object sender, EventArgs e)
+        {
+            AbrFormInPanel(new frmInfoC());
         }
     }
 }
