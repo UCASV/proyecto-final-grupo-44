@@ -31,38 +31,49 @@ namespace Gestion_Citas_Covid19
             string phoneNumber = textBox_Telephone.Text;
             string? email = textBox_Mail.Text;
             string? illness = textBox_Diseases.Text;
-            
+
             //Validadores
             //Regex regex = new Regex("^\\d{8}-\\d$"); DUI
             //Regex regex = new Regex("^\S+@\S+\.\S+$") Correo
 
             using (SGCCDBContext dbList = new SGCCDBContext())
             {
-                if(age >= 60 || cmbOccupation.SelectedItem != null) //validar
+                try
                 {
-                    Occupation occupationRef = (Occupation)cmbOccupation.SelectedItem;
-                    Occupation occupationDb = dbList.Set<Occupation>()
-                        .SingleOrDefault(x => x.Id == occupationRef.Id);
-                    
-                    Citizen citizen = new Citizen()
+                    if (age >= 60 || cmbOccupation.SelectedItem != null) //validar
                     {
-                        Dui = dui,
-                        FullName = fullName,
-                        Email = email,
-                        PhoneNumber = phoneNumber,
-                        IdCabin = this.idCabin,
-                        HomeAddress = address,
-                        IdDose = 1,
-                        Age = age,
-                        IdOccupation = occupationDb.Id
-                    };
+                        Occupation occupationRef = (Occupation)cmbOccupation.SelectedItem;
+                        Occupation occupationDb = dbList.Set<Occupation>()
+                            .SingleOrDefault(x => x.Id == occupationRef.Id);
 
-                    dbList.Citizens.Add(citizen);
-                    dbList.SaveChanges();
+                        Citizen citizen = new Citizen()
+                        {
+                            Dui = dui,
+                            FullName = fullName,
+                            Email = email,
+                            PhoneNumber = phoneNumber,
+                            IdCabin = this.idCabin,
+                            HomeAddress = address,
+                            IdDose = 1,
+                            Age = age,
+                            IdOccupation = occupationDb.Id
+                        };
+
+                        dbList.Citizens.Add(citizen);
+                        dbList.SaveChanges();
+                    }
 
                     Cabin auxCabin = dbList.Cabins.Find(idCabin);
                     string cabinAddress = auxCabin.CabinAddress;
-                    Generators.GenerateAppointment(dui, cabinAddress, 1);
+                    int idNewAppt = Generators.GenerateAppointment(dui, cabinAddress, 1);
+                    MessageBox.Show("cita generada con exito", "k",
+                                           MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Ya no puede generar mas citas", "error",
+                                            MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }

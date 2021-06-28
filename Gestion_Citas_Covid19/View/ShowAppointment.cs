@@ -37,6 +37,8 @@ namespace Gestion_Citas_Covid19
 
             dgvAppointments.Columns.Add(btn);
         }
+    
+            
 
         private void dgvAppointments_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -51,11 +53,20 @@ namespace Gestion_Citas_Covid19
 
                         MessageBox.Show("Funciona", $"ID = {appt.Id}",
                                             MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        if (appt.IdStatus !=3) {
+                            appt.IdStatus = 2;
+                            dbList.SaveChanges();
 
-                        var window = new FrmVaccinationProcess(appt.Id);
-                        this.Hide();
+                            var window = new FrmVaccinationProcess(appt.Id);
+                            this.Hide();
 
-                        window.ShowDialog();
+                            window.ShowDialog();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Error", "Esta cita finalizo",
+                                           MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
                     }
                 }
             }
