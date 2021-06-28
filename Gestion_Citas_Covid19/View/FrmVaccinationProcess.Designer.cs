@@ -243,7 +243,7 @@
             this.panel_Ef.Controls.Add(this.label7);
             this.panel_Ef.Controls.Add(this.btn_Yes);
             this.panel_Ef.Controls.Add(this.label8);
-            this.panel_Ef.Location = new System.Drawing.Point(328, 196);
+            this.panel_Ef.Location = new System.Drawing.Point(287, 147);
             this.panel_Ef.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel_Ef.Name = "panel_Ef";
             this.panel_Ef.Size = new System.Drawing.Size(192, 237);
