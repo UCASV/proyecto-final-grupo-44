@@ -73,6 +73,36 @@ namespace Gestion_Citas_Covid19.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Barra_horizontal {
+            get {
+                object obj = ResourceManager.GetObject("Barra horizontal", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Barras_tres {
+            get {
+                object obj = ResourceManager.GetObject("Barras tres", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Barras_tres__68x68p_ {
+            get {
+                object obj = ResourceManager.GetObject("Barras tres (68x68p)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Candado {
             get {
                 object obj = ResourceManager.GetObject("Candado", resourceCulture);
@@ -106,6 +136,36 @@ namespace Gestion_Citas_Covid19.Properties {
         internal static System.Drawing.Bitmap Logo_Gobierno_SV_white {
             get {
                 object obj = ResourceManager.GetObject("Logo_Gobierno_SV_white", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tres_barras {
+            get {
+                object obj = ResourceManager.GetObject("tres barras", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tres_barras___ {
+            get {
+                object obj = ResourceManager.GetObject("tres barras ()", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tres_barras__68x68p_1 {
+            get {
+                object obj = ResourceManager.GetObject("tres barras (68x68p)1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

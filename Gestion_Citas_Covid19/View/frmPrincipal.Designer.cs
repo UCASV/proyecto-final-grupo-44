@@ -44,17 +44,20 @@ namespace Gestion_Citas_Covid19
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel_WorkArea = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.Sidebar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).BeginInit();
             this.panel_Header.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // Sidebar
             // 
             this.Sidebar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.Sidebar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(37)))), ((int)(((byte)(92)))));
+            this.Sidebar.Controls.Add(this.pictureBox2);
             this.Sidebar.Controls.Add(this.btn_SignOff);
             this.Sidebar.Controls.Add(this.btn_CabinInformation);
             this.Sidebar.Controls.Add(this.btn_HideSidebar);
@@ -65,9 +68,9 @@ namespace Gestion_Citas_Covid19
             this.Sidebar.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.Sidebar.ForeColor = System.Drawing.Color.White;
             this.Sidebar.Location = new System.Drawing.Point(0, 0);
-            this.Sidebar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Sidebar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Sidebar.Name = "Sidebar";
-            this.Sidebar.Size = new System.Drawing.Size(205, 668);
+            this.Sidebar.Size = new System.Drawing.Size(256, 835);
             this.Sidebar.TabIndex = 0;
             // 
             // btn_SignOff
@@ -81,12 +84,12 @@ namespace Gestion_Citas_Covid19
             this.btn_SignOff.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSkyBlue;
             this.btn_SignOff.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
             this.btn_SignOff.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_SignOff.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn_SignOff.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btn_SignOff.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(37)))), ((int)(((byte)(92)))));
-            this.btn_SignOff.Location = new System.Drawing.Point(14, 317);
-            this.btn_SignOff.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btn_SignOff.Location = new System.Drawing.Point(18, 414);
+            this.btn_SignOff.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btn_SignOff.Name = "btn_SignOff";
-            this.btn_SignOff.Size = new System.Drawing.Size(167, 45);
+            this.btn_SignOff.Size = new System.Drawing.Size(209, 56);
             this.btn_SignOff.TabIndex = 5;
             this.btn_SignOff.Text = "Cerrar Sesion";
             this.btn_SignOff.UseVisualStyleBackColor = false;
@@ -103,12 +106,12 @@ namespace Gestion_Citas_Covid19
             this.btn_CabinInformation.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSkyBlue;
             this.btn_CabinInformation.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
             this.btn_CabinInformation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_CabinInformation.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn_CabinInformation.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btn_CabinInformation.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(37)))), ((int)(((byte)(92)))));
-            this.btn_CabinInformation.Location = new System.Drawing.Point(14, 264);
-            this.btn_CabinInformation.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btn_CabinInformation.Location = new System.Drawing.Point(18, 348);
+            this.btn_CabinInformation.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btn_CabinInformation.Name = "btn_CabinInformation";
-            this.btn_CabinInformation.Size = new System.Drawing.Size(167, 45);
+            this.btn_CabinInformation.Size = new System.Drawing.Size(209, 56);
             this.btn_CabinInformation.TabIndex = 4;
             this.btn_CabinInformation.Text = "Informacion de Cabina";
             this.btn_CabinInformation.UseVisualStyleBackColor = false;
@@ -121,12 +124,12 @@ namespace Gestion_Citas_Covid19
             this.btn_HideSidebar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_HideSidebar.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btn_HideSidebar.ForeColor = System.Drawing.Color.White;
-            this.btn_HideSidebar.Location = new System.Drawing.Point(14, 43);
-            this.btn_HideSidebar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btn_HideSidebar.Image = global::Gestion_Citas_Covid19.Properties.Resources.Barras_tres__68x68p_;
+            this.btn_HideSidebar.Location = new System.Drawing.Point(18, 79);
+            this.btn_HideSidebar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btn_HideSidebar.Name = "btn_HideSidebar";
-            this.btn_HideSidebar.Size = new System.Drawing.Size(29, 53);
+            this.btn_HideSidebar.Size = new System.Drawing.Size(45, 39);
             this.btn_HideSidebar.TabIndex = 0;
-            this.btn_HideSidebar.Text = "=";
             this.btn_HideSidebar.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btn_HideSidebar.UseVisualStyleBackColor = true;
             this.btn_HideSidebar.Click += new System.EventHandler(this.btn_HideSidebar_Click);
@@ -142,12 +145,12 @@ namespace Gestion_Citas_Covid19
             this.btn_PersonnelInformation.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSkyBlue;
             this.btn_PersonnelInformation.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
             this.btn_PersonnelInformation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_PersonnelInformation.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn_PersonnelInformation.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btn_PersonnelInformation.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(37)))), ((int)(((byte)(92)))));
-            this.btn_PersonnelInformation.Location = new System.Drawing.Point(14, 211);
-            this.btn_PersonnelInformation.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btn_PersonnelInformation.Location = new System.Drawing.Point(18, 282);
+            this.btn_PersonnelInformation.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btn_PersonnelInformation.Name = "btn_PersonnelInformation";
-            this.btn_PersonnelInformation.Size = new System.Drawing.Size(167, 45);
+            this.btn_PersonnelInformation.Size = new System.Drawing.Size(209, 56);
             this.btn_PersonnelInformation.TabIndex = 3;
             this.btn_PersonnelInformation.Text = "Informacion de Personal";
             this.btn_PersonnelInformation.UseVisualStyleBackColor = false;
@@ -164,12 +167,12 @@ namespace Gestion_Citas_Covid19
             this.btn_AddAppointment.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSkyBlue;
             this.btn_AddAppointment.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
             this.btn_AddAppointment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_AddAppointment.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn_AddAppointment.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btn_AddAppointment.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(37)))), ((int)(((byte)(92)))));
-            this.btn_AddAppointment.Location = new System.Drawing.Point(14, 157);
-            this.btn_AddAppointment.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btn_AddAppointment.Location = new System.Drawing.Point(18, 214);
+            this.btn_AddAppointment.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btn_AddAppointment.Name = "btn_AddAppointment";
-            this.btn_AddAppointment.Size = new System.Drawing.Size(167, 45);
+            this.btn_AddAppointment.Size = new System.Drawing.Size(209, 56);
             this.btn_AddAppointment.TabIndex = 2;
             this.btn_AddAppointment.Text = "Agentar Cita";
             this.btn_AddAppointment.UseVisualStyleBackColor = false;
@@ -186,12 +189,12 @@ namespace Gestion_Citas_Covid19
             this.btn_ShowAppointment.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSkyBlue;
             this.btn_ShowAppointment.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
             this.btn_ShowAppointment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_ShowAppointment.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn_ShowAppointment.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btn_ShowAppointment.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(37)))), ((int)(((byte)(92)))));
-            this.btn_ShowAppointment.Location = new System.Drawing.Point(14, 104);
-            this.btn_ShowAppointment.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btn_ShowAppointment.Location = new System.Drawing.Point(18, 148);
+            this.btn_ShowAppointment.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btn_ShowAppointment.Name = "btn_ShowAppointment";
-            this.btn_ShowAppointment.Size = new System.Drawing.Size(167, 45);
+            this.btn_ShowAppointment.Size = new System.Drawing.Size(209, 56);
             this.btn_ShowAppointment.TabIndex = 1;
             this.btn_ShowAppointment.Text = "Mostrar Citas";
             this.btn_ShowAppointment.UseVisualStyleBackColor = false;
@@ -200,10 +203,10 @@ namespace Gestion_Citas_Covid19
             // Logo
             // 
             this.Logo.Image = global::Gestion_Citas_Covid19.Properties.Resources.Logo_Gobierno_SV_white;
-            this.Logo.Location = new System.Drawing.Point(7, 0);
-            this.Logo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Logo.Location = new System.Drawing.Point(9, 0);
+            this.Logo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Logo.Name = "Logo";
-            this.Logo.Size = new System.Drawing.Size(121, 100);
+            this.Logo.Size = new System.Drawing.Size(151, 125);
             this.Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.Logo.TabIndex = 1;
             this.Logo.TabStop = false;
@@ -215,38 +218,38 @@ namespace Gestion_Citas_Covid19
             this.panel_Header.Controls.Add(this.pictureBox1);
             this.panel_Header.Controls.Add(this.Logo);
             this.panel_Header.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel_Header.Location = new System.Drawing.Point(205, 0);
-            this.panel_Header.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel_Header.Location = new System.Drawing.Point(256, 0);
+            this.panel_Header.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel_Header.Name = "panel_Header";
-            this.panel_Header.Size = new System.Drawing.Size(874, 104);
+            this.panel_Header.Size = new System.Drawing.Size(1093, 130);
             this.panel_Header.TabIndex = 1;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Gestion_Citas_Covid19.Properties.Resources.logo_covid_SD;
-            this.pictureBox1.Location = new System.Drawing.Point(135, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pictureBox1.Location = new System.Drawing.Point(169, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(130, 100);
+            this.pictureBox1.Size = new System.Drawing.Size(162, 125);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
             // tableLayoutPanel1
             // 
-            this.tableLayoutPanel1.BackColor = System.Drawing.Color.White;
+            this.tableLayoutPanel1.BackColor = System.Drawing.Color.Gainsboro;
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 1.168831F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 98.83117F));
             this.tableLayoutPanel1.Controls.Add(this.panel_WorkArea, 1, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(205, 104);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(256, 130);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 1.814059F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 98.18594F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(874, 564);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1093, 705);
             this.tableLayoutPanel1.TabIndex = 2;
             this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
             // 
@@ -254,22 +257,32 @@ namespace Gestion_Citas_Covid19
             // 
             this.panel_WorkArea.BackColor = System.Drawing.SystemColors.ControlLight;
             this.panel_WorkArea.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel_WorkArea.Location = new System.Drawing.Point(13, 14);
-            this.panel_WorkArea.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel_WorkArea.Location = new System.Drawing.Point(16, 17);
+            this.panel_WorkArea.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel_WorkArea.Name = "panel_WorkArea";
-            this.panel_WorkArea.Size = new System.Drawing.Size(858, 546);
+            this.panel_WorkArea.Size = new System.Drawing.Size(1073, 683);
             this.panel_WorkArea.TabIndex = 0;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::Gestion_Citas_Covid19.Properties.Resources.Barra_horizontal;
+            this.pictureBox2.Location = new System.Drawing.Point(15, 120);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(212, 24);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 6;
+            this.pictureBox2.TabStop = false;
             // 
             // FrmPrincipal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1079, 668);
+            this.ClientSize = new System.Drawing.Size(1349, 835);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.panel_Header);
             this.Controls.Add(this.Sidebar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FrmPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmPrincipal";
@@ -278,6 +291,7 @@ namespace Gestion_Citas_Covid19
             this.panel_Header.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -298,5 +312,6 @@ namespace Gestion_Citas_Covid19
         private System.Windows.Forms.Panel panel_WorkArea;
         private System.Windows.Forms.Button btn_HideSidebar;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private PictureBox pictureBox2;
     }
 }
