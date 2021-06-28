@@ -155,7 +155,7 @@ namespace Gestion_Citas_Covid19
             this.btnToAccess.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(234)))), ((int)(((byte)(255)))));
             this.btnToAccess.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnToAccess.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnToAccess.ForeColor = System.Drawing.Color.Black;
+            this.btnToAccess.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(37)))), ((int)(((byte)(92)))));
             this.btnToAccess.Location = new System.Drawing.Point(332, 322);
             this.btnToAccess.Name = "btnToAccess";
             this.btnToAccess.Size = new System.Drawing.Size(120, 40);

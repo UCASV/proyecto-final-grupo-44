@@ -1,6 +1,4 @@
-﻿using Gestion_Citas_Covid19.Classes;
-using Gestion_Citas_Covid19.SqlServerContext;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -68,35 +66,6 @@ namespace Gestion_Citas_Covid19.View
             panel_Ef.Location = new Point(287, 158);
             btn_No.Location = new Point(88, 78);
             btn_Yes.Show();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            DateTime waitTime = DTP_WaitingRoom.Value;
-            DateTime vaccineTime = DTP_Vaccination.Value;
-
-            using (SGCCDBContext dbList = new SGCCDBContext())
-            {
-                Appointment appt = dbList.Appointments.Find(idAppointment);
-                appt.DtWaitlist = waitTime;
-                appt.DtVaccination = vaccineTime;
-                appt.IdStatus = 3;
-                dbList.SaveChanges();
-
-                
-                    Citizen pacient = dbList.Citizens.Find(appt.DuiCitizen);
-                if (pacient.IdDose < 3)
-                {
-                    pacient.IdDose = pacient.IdDose + 1;
-                    dbList.SaveChanges();
-
-                    int idNewAppt = Generators.GenerateAppointment(appt.DuiCitizen, appt.ApptAddress, (int)pacient.IdDose);
-                }
-                else
-                    MessageBox.Show("Ya no puede generar mas citas", "X2error",
-                                           MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-
         }
     }
 }
