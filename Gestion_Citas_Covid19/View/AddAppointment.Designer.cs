@@ -50,6 +50,10 @@ namespace Gestion_Citas_Covid19
             this.btn_SaveData = new System.Windows.Forms.Button();
             this.btn_PrintData = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
+            this.btnDis = new System.Windows.Forms.Button();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.btnEnf = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -216,6 +220,7 @@ namespace Gestion_Citas_Covid19
             // cmbOccupation
             // 
             this.cmbOccupation.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.cmbOccupation.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbOccupation.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(37)))), ((int)(((byte)(92)))));
             this.cmbOccupation.FormattingEnabled = true;
             this.cmbOccupation.Items.AddRange(new object[] {
@@ -280,12 +285,58 @@ namespace Gestion_Citas_Covid19
             this.label9.TabIndex = 19;
             this.label9.Text = "* : Opcional";
             // 
+            // btnDis
+            // 
+            this.btnDis.Location = new System.Drawing.Point(554, 230);
+            this.btnDis.Name = "btnDis";
+            this.btnDis.Size = new System.Drawing.Size(94, 29);
+            this.btnDis.TabIndex = 20;
+            this.btnDis.Text = "SI";
+            this.btnDis.UseVisualStyleBackColor = true;
+            this.btnDis.Click += new System.EventHandler(this.btnDis_Click);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(37)))), ((int)(((byte)(92)))));
+            this.label10.Location = new System.Drawing.Point(508, 204);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(207, 23);
+            this.label10.TabIndex = 21;
+            this.label10.Text = "¿Posee una discapacidad?";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(37)))), ((int)(((byte)(92)))));
+            this.label11.Location = new System.Drawing.Point(443, 307);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(323, 23);
+            this.label11.TabIndex = 22;
+            this.label11.Text = "¿Posee una enfermedad no transmisible?";
+            // 
+            // btnEnf
+            // 
+            this.btnEnf.Location = new System.Drawing.Point(554, 333);
+            this.btnEnf.Name = "btnEnf";
+            this.btnEnf.Size = new System.Drawing.Size(94, 29);
+            this.btnEnf.TabIndex = 23;
+            this.btnEnf.Text = "SI";
+            this.btnEnf.UseVisualStyleBackColor = true;
+            this.btnEnf.Click += new System.EventHandler(this.btnEnf_Click);
+            // 
             // AddAppointment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(858, 547);
+            this.Controls.Add(this.btnEnf);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.btnDis);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.btn_PrintData);
             this.Controls.Add(this.btn_SaveData);
@@ -339,5 +390,9 @@ namespace Gestion_Citas_Covid19
         private System.Windows.Forms.Button btn_SaveData;
         private System.Windows.Forms.Button btn_PrintData;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Button btnDis;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Button btnEnf;
     }
 }

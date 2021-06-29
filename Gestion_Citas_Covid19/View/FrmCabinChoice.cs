@@ -63,7 +63,7 @@ namespace Gestion_Citas_Covid19
                 else if (radCabin10.Checked == true)
                     id = 10;
 
-                DateTime loginDt = DateTime.Today; //Fix 
+                DateTime loginDt = DateTime.Now; //Fix 
                 
                 using (SGCCDBContext dbList = new SGCCDBContext()) 
                 {

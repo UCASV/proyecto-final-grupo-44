@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Gestion_Citas_Covid19.Classes;
@@ -30,39 +31,63 @@ namespace Gestion_Citas_Covid19
             int age = int.Parse(textBox_Age.Text);
             string phoneNumber = textBox_Telephone.Text;
             string? email = textBox_Mail.Text;
-            string? illness = textBox_Diseases.Text;
-            
+            string[] x = textBox_Diseases.Text.Split(',');
+
             //Validadores
-            //Regex regex = new Regex("^\\d{8}-\\d$"); DUI
+
+
             //Regex regex = new Regex("^\S+@\S+\.\S+$") Correo
 
             using (SGCCDBContext dbList = new SGCCDBContext())
             {
-                if(age >= 60 || cmbOccupation.SelectedItem != null) //validar
-                {
-                    Occupation occupationRef = (Occupation)cmbOccupation.SelectedItem;
-                    Occupation occupationDb = dbList.Set<Occupation>()
-                        .SingleOrDefault(x => x.Id == occupationRef.Id);
-                    
-                    Citizen citizen = new Citizen()
+                try {
+                    if (age >= 60 || cmbOccupation.SelectedIndex != 5 || enfC == true || enfT == true) //validar
                     {
-                        Dui = dui,
-                        FullName = fullName,
-                        Email = email,
-                        PhoneNumber = phoneNumber,
-                        IdCabin = this.idCabin,
-                        HomeAddress = address,
-                        IdDose = 1,
-                        Age = age,
-                        IdOccupation = occupationDb.Id
-                    };
+                        Occupation occupationRef = (Occupation)cmbOccupation.SelectedItem;
+                        Occupation occupationDb = dbList.Set<Occupation>()
+                            .SingleOrDefault(x => x.Id == occupationRef.Id);
 
-                    dbList.Citizens.Add(citizen);
-                    dbList.SaveChanges();
+                        enfC = false;
+                        enfT = false;
 
-                    Cabin auxCabin = dbList.Cabins.Find(idCabin);
-                    string cabinAddress = auxCabin.CabinAddress;
-                    Generators.GenerateAppointment(dui, cabinAddress, 1);
+                        Citizen citizen = new Citizen()
+                        {
+                            Dui = dui,
+                            FullName = fullName,
+                            Email = email,
+                            PhoneNumber = phoneNumber,
+                            IdCabin = this.idCabin,
+                            HomeAddress = address,
+                            IdDose = 1,
+                            Age = age,
+                            IdOccupation = occupationDb.Id
+                        };
+
+                       foreach(string c in x)
+                        {
+                            ChronicIllness chrIllness = new ChronicIllness()
+                            {
+                                DuiCitizen = dui,
+                                ChronicIllness1 = c
+                            };
+                            dbList.ChronicIllnesses.Add(chrIllness);
+                        }
+
+                        dbList.Citizens.Add(citizen);
+                        dbList.SaveChanges();
+
+                        Cabin auxCabin = dbList.Cabins.Find(idCabin);
+                        string cabinAddress = auxCabin.CabinAddress;
+                        int idNewAppt = Generators.GenerateAppointment(dui, cabinAddress, 1);
+                        MessageBox.Show("cita generada con exito", "Felicidades",
+                                               MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+                    }
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Ya no puede generar mas citas", "error",
+                                            MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
@@ -77,7 +102,20 @@ namespace Gestion_Citas_Covid19
                 cmbOccupation.DisplayMember = "Occupation1";
                 cmbOccupation.ValueMember = "Id";
             }
+        }
 
+        bool enfC = false;
+        bool enfT = false;
+
+        private void btnDis_Click(object sender, EventArgs e)
+        {
+            enfC = true;
+        }
+
+        private void btnEnf_Click(object sender, EventArgs e)
+        {
+            enfT = true;
         }
     }
+    
 }

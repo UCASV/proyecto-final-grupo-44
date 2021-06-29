@@ -49,13 +49,20 @@ namespace Gestion_Citas_Covid19
                         MainVm selectedItem = (MainVm)dgvAppointments.CurrentRow.DataBoundItem;
                         Appointment appt = dbList.Appointments.Find(selectedItem.ID);
 
-                        MessageBox.Show("Funciona", $"ID = {appt.Id}",
-                                            MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        if (appt.IdStatus != 3)
+                        {
+                            appt.IdStatus = 2;
+                            dbList.SaveChanges();
 
-                        var window = new FrmVaccinationProcess(appt.Id);
-                        this.Hide();
-
-                        window.ShowDialog();
+                            var window = new FrmVaccinationProcess(appt.Id);
+                            this.Hide();
+                            window.ShowDialog();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Error", "Esta cita finalizo",
+                                           MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
                     }
                 }
             }
@@ -65,6 +72,6 @@ namespace Gestion_Citas_Covid19
                                            MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-               
+
     }
 }
